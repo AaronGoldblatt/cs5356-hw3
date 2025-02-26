@@ -12,6 +12,9 @@
             <h1>Aaron Goldblatt</h1>
             <h2>Software Engineer at Bank of America Merrill Lynch</h2>
             <img src="images/profile_picture.png" alt="Profile Picture" width="200" height="200">
+            <p>
+                For the image above, I used the :hover pseudo-class to make the image react in a dramatic way when the user hovers over it. I employed the properties transform and box-shadow to achieve this effect. Transform is a property that allows you to scale, rotate, or translate an element. Box-shadow is a property that allows you to add a shadow to an element. By employing both of these, I created a 3D effect that makes the image turn and have a glowing shadow when the user hovers over it.
+            </p>
         </div>
         <section class="bio">
             <h2>Bio</h2>
@@ -32,7 +35,11 @@
         <section class="video-recommendations">
             <h2>Video Recommendations</h2>
             <p>
-                The internet is home to a panoply of content, but there are some real diamonds in the rough if you know where to look. Here are some S-tier YouTube video recommendations that will make you laugh, cry, and ponder:
+                The internet is home to a panoply of content, but there are some real diamonds in the rough if you know where to look. Here are some S-tier YouTube video recommendations that will make you laugh, cry, and ponder. 
+                <br>
+                To create these embedded YouTube videos, I employed the help of the iframe tag. This HTML tag is a cool way to embed HTML content from other websites into your own page. The i stands for inline frame which means that it puts content from another website into that space on your webpage. It has a plethora of attributes that can be used to customize the embedded content and what functionality the content has within the context of the parent page. Here I had it embed the YouTube videos in the page and allowed them to have some classical functionality like autoplay, picture-in-picture, and fullscreen.
+                <br>
+                I also used the CSS counter-reset and counter-increment properties with the :before pseudo-element to number the video titles. This was a useful trick to number the videos without having to make the headers a numbered list, which would have made formatting the page to look the way I wanted significantly more difficult.
             </p>
             <div class="video-card-container">
                 <div class="video-card">
@@ -43,7 +50,6 @@
                             height="315" 
                             src="https://www.youtube.com/embed/WqnXp6Saa8Y" 
                             title="CAPTCHA - videogamedunkey" 
-                            frameborder="5" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
@@ -57,7 +63,6 @@
                             height="315" 
                             src="https://www.youtube.com/embed/3WSk86uIx2E" 
                             title="Flex Tape - JonTron" 
-                            frameborder="5" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
@@ -71,7 +76,6 @@
                             height="315" 
                             src="https://www.youtube.com/embed/8ci2hj7CSHI" 
                             title="Flex Tape - JonTron" 
-                            frameborder="5" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
@@ -85,7 +89,6 @@
                             height="315" 
                             src="https://www.youtube.com/embed/O2C5R3FOWdE" 
                             title="Garfield - SuperEyepatchWolf" 
-                            frameborder="5" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
