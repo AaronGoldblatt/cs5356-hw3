@@ -7,6 +7,9 @@ body {
     padding: 0;
     background-color: black;
     color: orange;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .header, .bio, .video-recommendations {
@@ -35,6 +38,10 @@ h1 {
     font-family: 'Monoton', Arial, sans-serif;
     font-size: 4rem;
     margin: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 0 10px; 
 }
 
 .header img {
