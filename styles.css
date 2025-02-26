@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
 body {
     font-family: 'Space Grotesk', Arial, sans-serif;
@@ -147,4 +148,65 @@ p {
     height: 100%;
     box-sizing: border-box;
     border: 3px solid rgba(255, 165, 0, 0.3);
+}
+
+.kanye-west-quoter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.kanye-west-quoter h2 {
+    margin-bottom: 1rem;
+}
+
+.kanye-west-quoter p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.kanye-speech-bubble {
+    position: relative;
+    background: rgba(255, 165, 0, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: fit-content;
+    height: auto;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 85%;
+    font-family: 'UnifrakturMaguntia', 'Space Grotesk', Arial, sans-serif;
+}
+
+.kanye-speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: rgba(255, 165, 0, 0.9);
+}
+
+.kanye-image {
+    position: relative;
+    width: auto;
+    height: 200px;
+}
+
+.kanye-image img {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
 }
