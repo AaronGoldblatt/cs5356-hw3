@@ -68,6 +68,11 @@ function createKanyeWestYouTubeEmbed() {
 }
 
 function attachHoldListener(imageElement) {
+    imageElement.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        return false;
+    });
+    
     imageElement.addEventListener('mousedown', () => {
         originalKanyeWestPicture = imageElement.cloneNode(true);
         
