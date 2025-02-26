@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap');
 
 body {
     font-family: 'Space Grotesk', Arial, sans-serif;
@@ -186,7 +186,7 @@ p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 85%;
-    font-family: 'UnifrakturMaguntia', 'Space Grotesk', Arial, sans-serif;
+    font-family: 'Grenze Gotisch', 'Space Grotesk', Arial, sans-serif;
 }
 
 .kanye-speech-bubble:after {
