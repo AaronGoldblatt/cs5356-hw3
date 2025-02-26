@@ -20,6 +20,11 @@ let originalKanyeWestPicture;
 function createKanyeWestYouTubeEmbed() {
     const container = document.createElement('div');
     container.style.position = 'relative';
+    container.style.width = '60%';
+    container.style.paddingBottom = '33.75%';
+    container.style.display = 'flex';
+    container.style.justifyContent = 'center';
+    container.style.alignItems = 'center';
 
     // Create the iframe with minimal controls to replace the original image and autoplay
     const iframe = document.createElement('iframe');
@@ -33,7 +38,13 @@ function createKanyeWestYouTubeEmbed() {
         "&iv_load_policy=3" +  
         "&playsinline=1" + 
         "&mute=0";  
-    iframe.style.border = "none";
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    iframe.style.transition = 'all 0.3s ease';
     
     // Create a clickable overlay to go with the iframe to terminate the replacement and revert to the original image, with the listener attached to it
     const clickOverlay = document.createElement('div');
