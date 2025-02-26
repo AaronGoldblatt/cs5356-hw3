@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); 
+
+body {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: orange;
+}
+
+.header, .bio, .video-recommendations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: orange;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Monoton', Arial, sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.header img {
+    border-radius: 15%;
+    max-width: 200px;
+    height: auto;
+    border: 5px solid orange;
+    margin-top: 1rem;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 0.2rem;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.video-recommendations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.2rem;
+    padding: 20px;
+}
+
+.video-recommendations p {
+    text-align: center;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 875px;
+    height: auto;
+    width: 100%;
+}
+
+.video-card h3 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.video-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 3px solid rgba(255, 165, 0, 0.3);
+}
