@@ -203,10 +203,21 @@ p {
     position: relative;
     width: auto;
     height: 200px;
+    cursor: pointer;
 }
 
-.kanye-image img {
+.kanye-image img,
+.kanye-image iframe {
     height: 200px;
     width: auto;
     border-radius: 10px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.kanye-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: orange;
+    font-style: italic;
 }

@@ -11,3 +11,68 @@ async function fetchKanyeQuote() {
 }
 
 document.querySelector('.kanye-speech-bubble').addEventListener('click', fetchKanyeQuote);
+
+const kanyeContainer = document.querySelector('.kanye-image');
+const kanyeImg = kanyeContainer.querySelector('img');
+let holdTimer;
+let originalKanyeWestPicture;
+
+function createKanyeWestYouTubeEmbed() {
+    const container = document.createElement('div');
+    container.style.position = 'relative';
+
+    // Create the iframe with minimal controls to replace the original image and autoplay
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/sCUs_-PjC-E?" + 
+        "autoplay=1" +          
+        "&controls=0" +         
+        "&disablekb=1" +       
+        "&fs=0" +              
+        "&modestbranding=1" +   
+        "&rel=0" +             
+        "&iv_load_policy=3" +  
+        "&playsinline=1" + 
+        "&mute=0";  
+    iframe.style.border = "none";
+    
+    // Create a clickable overlay to go with the iframe to terminate the replacement and revert to the original image, with the listener attached to it
+    const clickOverlay = document.createElement('div');
+    clickOverlay.style.position = 'absolute';
+    clickOverlay.style.top = '0';
+    clickOverlay.style.left = '0';
+    clickOverlay.style.width = '100%';
+    clickOverlay.style.height = '100%';
+    clickOverlay.style.cursor = 'pointer';
+    
+    container.appendChild(iframe);
+    container.appendChild(clickOverlay);
+    
+    // When the click overlay is clicked, replace the container with the original image and attach the hold listener to it
+    clickOverlay.addEventListener('click', () => {
+        kanyeContainer.replaceChild(originalKanyeWestPicture, container);
+        attachHoldListener(originalKanyeWestPicture);
+    });
+
+    return container;
+}
+
+function attachHoldListener(imageElement) {
+    imageElement.addEventListener('mousedown', () => {
+        originalKanyeWestPicture = imageElement.cloneNode(true);
+        
+        // When the image is held down for 3 seconds, replace the image with the iframe
+        holdTimer = setTimeout(() => {
+            const kanyeWestYouTubeEmbed = createKanyeWestYouTubeEmbed();
+            kanyeContainer.replaceChild(kanyeWestYouTubeEmbed, imageElement);
+        }, 3000);
+    });
+
+    imageElement.addEventListener('mouseup', cancelHold);
+    imageElement.addEventListener('mouseleave', cancelHold);
+}
+
+function cancelHold() {
+    clearTimeout(holdTimer);
+}
+
+attachHoldListener(kanyeImg);
